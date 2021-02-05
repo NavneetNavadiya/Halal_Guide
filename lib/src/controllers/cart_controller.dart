@@ -43,6 +43,7 @@ class CartController extends ControllerMVC {
         ));
       }
       onLoadingCartDone();
+      // if (payment != null) addOrder(carts);
     });
   }
 

@@ -150,7 +150,7 @@ class _FoodWidgetState extends StateMVC<FoodWidget> {
                                             ),
                                     ),
                                     Expanded(child: SizedBox(height: 0)),
-                                    Container(
+                                    _con.food.weight != null && _con.food.unit != null ? Container() : Container(
                                         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
                                         decoration: BoxDecoration(color: Theme.of(context).focusColor, borderRadius: BorderRadius.circular(24)),
                                         child: Text(
@@ -162,7 +162,7 @@ class _FoodWidgetState extends StateMVC<FoodWidget> {
                                         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
                                         decoration: BoxDecoration(color: Theme.of(context).focusColor, borderRadius: BorderRadius.circular(24)),
                                         child: Text(
-                                          _con.food.packageItemsCount + " " + S.of(context).items,
+                                          ( _con.food.packageItemsCount ?? "") + " " + S.of(context).items,
                                           style: Theme.of(context).textTheme.caption.merge(TextStyle(color: Theme.of(context).primaryColor)),
                                         )),
                                   ],
